@@ -5,6 +5,9 @@ import { DataGrid } from "@mui/x-data-grid";
 import { GridColDef } from "@mui/x-data-grid";
 import moment from "moment";
 import { IActivity } from "../../types/global.typing";
+import Button from "@mui/material/Button/Button";
+
+//Grid for Activities
 
 const column: GridColDef[] = [
   { field: "id", headerName: "ID", width: 100 },
@@ -16,6 +19,20 @@ const column: GridColDef[] = [
     width: 200,
     renderCell: (params) => moment(params.row.createdAt).format("DD-MM-YYYY"),
   },
+  {
+    field: "delete",
+    headerName: "",
+    width: 100,
+    sortable: false,
+    renderCell: ({ row }) => <Button className="delete-button">Delete</Button>,
+  },
+  {
+    field: "edit",
+    headerName: "",
+    width: 100,
+    sortable: false,
+    renderCell: ({ row }) => <Button className="edit-button">Edit</Button>,
+  }
 ];
 
 interface IActivitiesGridProps {

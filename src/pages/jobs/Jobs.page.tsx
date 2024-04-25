@@ -30,15 +30,15 @@ const Jobs = () => {
   return (
     <div className="content jobs">
       <div className="heading">
-        <h2>Jobs</h2>
-        <Button variant="outlined" onClick={() => redirect("/jobs/add")}>
+        <h2>Tasks</h2>
+        <Button variant="outlined" onClick={() => redirect("/tasks/add")}>
           <Add />
         </Button>
       </div>
       {loading ? (
         <CircularProgress size={100} />
       ) : jobs.length === 0 ? (
-        <h1>No Job</h1>
+        <h1>No Tasks</h1>
       ) : (
         <JobsGrid data={jobs} />
       )}

@@ -8,7 +8,7 @@ import { ThemeContext } from "../../context/theme.context";
 const links = [
   { href: "/", label: "Home" },
   { href: "/activities", label: "Activities" },
-  { href: "/jobs", label: "Jobs" },
+  { href: "/tasks", label: "Tasks" },
   { href: "/candidates", label: "Candidates" },
 ];
 

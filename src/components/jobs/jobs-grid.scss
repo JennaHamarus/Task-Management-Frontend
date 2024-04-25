@@ -1,5 +1,11 @@
-.jobs-grid { 
-    * {
-        color: var(--text-color);
-    }
+.jobs-grid {
+  * {
+    color: var(--text-color);
+  }
+  .delete-button {
+    background-color: rgb(179, 17, 17);
+  }
+  .edit-button {
+    background-color: rgb(51, 84, 56);
+  }
 }

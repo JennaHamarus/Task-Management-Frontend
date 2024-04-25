@@ -10,20 +10,16 @@ import Select from "@mui/material/Select/Select";
 import "./jobs.scss";
 import httpHelper from "../../helpers/http.helper";
 
-const levelsArray: string[] = [
-  "Intern",
-  "Junior",
-  "MidLevel",
-  "Senior",
-  "TeamLead",
-  "Cto",
-  "Architect",
+const statusArray: string[] = [
+  "Waiting",
+  "In Progress",
+  "Done"
 ];
 
 const AddJob = () => {
   const [job, setJob] = useState<ICreateJobDto>({
     title: "",
-    level: "",
+    status: "",
     activityId: "",
   });
   const [activities, setActivity] = useState<IActivity[]>([]);
@@ -42,24 +38,24 @@ const AddJob = () => {
   }, []);
 
   const handleClickSaveBtn = () => {
-    if (job.title === "" || job.level === "" || job.activityId === "") {
+    if (job.title === "" || job.status === "" || job.activityId === "") {
       alert("Fill all fields");
       return;
     }
     httpHelper
       .post("/Job/Create", job)
-      .then((response) => redirect("/activities"))
+      .then((response) => redirect("/tasks"))
       .catch((error) => console.log(error));
   };
 
   const handleClickBackBtn = () => {
-    redirect("/activities");
+    redirect("/tasks");
   };
 
   return (
     <div className="content">
       <div className="add-job">
-        <h2>Add New Job</h2>
+        <h2>Add New Task</h2>
         <TextField
           autoComplete="off"
           label="Job Title"
@@ -68,13 +64,13 @@ const AddJob = () => {
           onChange={(e) => setJob({ ...job, title: e.target.value })}
         />
         <FormControl fullWidth>
-          <InputLabel>Job Level</InputLabel>
+          <InputLabel>Task Status</InputLabel>
           <Select
-            value={job.level}
-            label="Job Level"
-            onChange={(e) => setJob({ ...job, level: e.target.value })}
+            value={job.status}
+            label="Job Status"
+            onChange={(e) => setJob({ ...job, status: e.target.value })}
           >
-            {levelsArray.map((item) => (
+            {statusArray.map((item) => (
               <MenuItem key={item} value={item}>
                 {item}
               </MenuItem>
@@ -119,5 +115,3 @@ const AddJob = () => {
 };
 
 export default AddJob;
-
-//Jatka videota eteenpäin

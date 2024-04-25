@@ -13,7 +13,7 @@ export interface ICreateActivityDto {
 export interface IJob {
   id: string;
   title: string;
-  level: string;
+  status: string;
   activityId: string;
   activityName: string;
   createdAt: string;
@@ -21,6 +21,6 @@ export interface IJob {
 
 export interface ICreateJobDto {
   title: string;
-  level: string;
+  status: string;
   activityId: string;
 }
