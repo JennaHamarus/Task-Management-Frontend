@@ -15,8 +15,18 @@ const column: GridColDef[] = [
   { field: "content", headerName: "Content", width: 300 },
   { field: "status", headerName: "Status", width: 150 },
   { field: "activityName", headerName: "Activity Name", width: 150 },
-  { field: "startDate", headerName: "Start Date", width: 150 },
-  { field: "endDate", headerName: "End Date", width: 150 },
+  {
+    field: "startDate",
+    headerName: "Start Date",
+    width: 150,
+    renderCell: (params) => moment(params.row.startDate).format("DD-MM-YYYY"),
+  },
+  {
+    field: "endDate",
+    headerName: "End Date",
+    width: 150,
+    renderCell: (params) => moment(params.row.endDate).format("DD-MM-YYYY"),
+  },
   {
     field: "createdAt",
     headerName: "Creation Time",
