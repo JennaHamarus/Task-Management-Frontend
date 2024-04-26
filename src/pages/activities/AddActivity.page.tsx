@@ -51,7 +51,7 @@ const AddActivity = () => {
           >
             <MenuItem value="Waiting">Waiting</MenuItem>
             <MenuItem value="InProgress">In Progress</MenuItem>
-            <MenuItem value="Ready">Ready</MenuItem>
+            <MenuItem value="Completed">Completed</MenuItem>
           </Select>
         </FormControl>
         <div className="btns">
