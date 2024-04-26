@@ -47,4 +47,3 @@ const Activities = () => {
 };
 
 export default Activities;
-//Frontend ei saa jostain syystä tietoa backendistä. Ongelma ilmeni, kun vaihdoin databasessa Activityn columnin nimen Sizesta Statukseksi

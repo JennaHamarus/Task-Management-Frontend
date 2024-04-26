@@ -9,7 +9,6 @@ const links = [
   { href: "/", label: "Home" },
   { href: "/activities", label: "Activities" },
   { href: "/tasks", label: "Tasks" },
-  { href: "/candidates", label: "Candidates" },
 ];
 
 const Navbar = () => {

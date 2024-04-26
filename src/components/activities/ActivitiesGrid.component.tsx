@@ -6,6 +6,7 @@ import { GridColDef } from "@mui/x-data-grid";
 import moment from "moment";
 import { IActivity } from "../../types/global.typing";
 import Button from "@mui/material/Button/Button";
+import DeleteJob from "../jobs/DeleteJob";
 
 //Grid for Activities
 
@@ -31,7 +32,7 @@ const column: GridColDef[] = [
     headerName: "",
     width: 100,
     sortable: false,
-    renderCell: ({ row }) => <Button className="edit-button">Edit</Button>,
+    renderCell: ({ row }) => <Button className="edit-button" onClick={DeleteJob}>Edit</Button>,
   }
 ];
 
