@@ -11,9 +11,12 @@ import Button from "@mui/material/Button/Button";
 
 const column: GridColDef[] = [
   { field: "id", headerName: "ID", width: 100 },
-  { field: "title", headerName: "Title", width: 300 },
+  { field: "title", headerName: "Title", width: 200 },
+  { field: "content", headerName: "Content", width: 300 },
   { field: "status", headerName: "Status", width: 150 },
   { field: "activityName", headerName: "Activity Name", width: 150 },
+  { field: "startDate", headerName: "Start Date", width: 150 },
+  { field: "endDate", headerName: "End Date", width: 150 },
   {
     field: "createdAt",
     headerName: "Creation Time",
