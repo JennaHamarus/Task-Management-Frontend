@@ -1,5 +1,7 @@
 Task Management Frontend school project with pages "Home", "Activities", "Tasks", "Add Activity" and "Add Task".
 
+Backend for this project is in the other repository.
+
 You can start the app with command `npm start`
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
